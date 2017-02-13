@@ -6,7 +6,7 @@ struct node
     int w;
     node *next;
 };
-node *rev (node *p, node*q) //null and first na pocz¹tku //wskaznik na poprzedni do ktorego trzeba sie odwolac w last oraz first;
+node *rev (node *p, node*q) //null and first na poczÂ¹tku //wskaznik na poprzedni do ktorego trzeba sie odwolac w last oraz first;
 {
         if (q==NULL) return p;
         node *r = q->next;
@@ -33,7 +33,7 @@ node *revunrec (node *p)
     }
     return q;
 }
-void wstaw (int w, node* &p)
+void Insert (int w, node* &p)
 {
     node* q = new node;
     q->w=w;
@@ -48,7 +48,7 @@ int main ()
     {
         int a;
         cin>>a;
-        wstaw (a, p);
+        Insert (a, p);
     }
 
 
