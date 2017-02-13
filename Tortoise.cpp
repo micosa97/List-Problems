@@ -1,3 +1,6 @@
+/*Quite useless, but interesting Algo. Let us consider a directed list with a loop. In fact, there's no end of the list. 
+Point is to find length of the loop. It's not obvious, because we don't know if we are "in loop" in the beginning.*/
+
 #include<iostream>
 using namespace std;
 struct node{
@@ -6,14 +9,14 @@ struct node{
 int LengthOfCycle(node* first){
     node* A = first;
     node* B = first;
-    // przy A skacze o jeden przy B o dwa. Jak siê spotkaj¹, to znaczy, ¿e jesteœmy w cyklu
+    // przy A skacze o jeden przy B o dwa. Jak siÃª spotkajÂ¹, to znaczy, Â¿e jesteÅ“my w cyklu
     do
     {
         A = A->next;
         B = B->next->next;
     } while(A != B);
 
-    int length = 1; //oblicza d³ugoœæ cyklu
+    int length = 1; //oblicza dÂ³ugoÅ“Ã¦ cyklu
     B = B->next;
     while(B!=A){
         B = B->next;
@@ -31,7 +34,7 @@ int main(){
     node* middle = last;
     for(int i = 0; i<5; i++){
         last->next = new node;
-        last = last->next;  //przyk³adowy test
+        last = last->next;  //przykÂ³adowy test
     }
     last->next = middle;
     cout << LengthOfCycle(first) << endl;
