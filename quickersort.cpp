@@ -27,7 +27,7 @@ void show (node *beg)
     cout << endl;
 }
 
-void qs (node *&p, node *e)  //p - prime e - end, q - duszek, c - pivot a- aktualny k - kopia
+void qs (node *&p, node *e)  //p - prime e - end, q - ghost, c - pivot a- actual k - kopia
 {
     if (p==e) return;
     if (p->next==e and p->w<=e->w) return;
